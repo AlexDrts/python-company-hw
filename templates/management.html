@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Management{% endblock %}
+{% block heading %}Company management{% endblock %}
+{% block subheading %}The people who lead the company.{% endblock %}
+
+{% block content %}
+    <div class="grid">
+        <div class="card">
+            <div class="avatar">JD</div>
+            <h3>John Doe</h3>
+            <div class="meta">Chief Executive Officer</div>
+            <p>Leads company strategy.</p>
+        </div>
+        <div class="card">
+            <div class="avatar">JS</div>
+            <h3>Jane Smith</h3>
+            <div class="meta">Chief Technology Officer</div>
+            <p>Leads development and architecture.</p>
+        </div>
+        <div class="card">
+            <div class="avatar">AB</div>
+            <h3>Alex Brown</h3>
+            <div class="meta">Chief Financial Officer</div>
+            <p>Manages company finances.</p>
+        </div>
+    </div>
+{% endblock %}

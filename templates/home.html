@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+{% block heading %}Welcome to Company{% endblock %}
+{% block subheading %}We build software solutions for business.{% endblock %}
+
+{% block content %}
+    <h2 class="section-title">What we do</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Web development</h3>
+            <p>Websites and web applications.</p>
+        </div>
+        <div class="card">
+            <h3>Automation</h3>
+            <p>Integrations and business process automation.</p>
+        </div>
+        <div class="card">
+            <h3>Support</h3>
+            <p>Maintenance after launch.</p>
+        </div>
+    </div>
+
+    <h2 class="section-title">In numbers</h2>
+    <div class="card stats">
+        <div class="stat"><b>10</b>years on the market</div>
+        <div class="stat"><b>100+</b>completed projects</div>
+        <div class="stat"><b>50</b>team members</div>
+    </div>
+
+    <a class="btn" href="/contacts/">Contact us</a>
+{% endblock %}
