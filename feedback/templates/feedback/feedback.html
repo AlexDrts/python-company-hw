@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Feedback{% endblock %}
+{% block heading %}Write to us{% endblock %}
+{% block subheading %}Leave a message and our manager will contact you within one working day.{% endblock %}
+
+{% block content %}
+    <div class="breadcrumbs">
+        <a href="{% url 'sections:home' %}">Home</a> /
+        <a href="{% url 'sections:contacts' %}">Contacts</a> /
+        Feedback
+    </div>
+
+    <div class="grid grid-2">
+        <form class="card form" method="post" novalidate>
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-row{% if field.errors %} has-error{% endif %}">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {{ field }}
+                    {% for error in field.errors %}<div class="form-error">{{ error }}</div>{% endfor %}
+                </div>
+            {% endfor %}
+            <button class="btn" type="submit">Send message</button>
+        </form>
+
+        <div class="card">
+            <h3>Other ways to reach us</h3>
+            <ul class="contact-list">
+                <li><a href="mailto:info@example.com">info@example.com</a></li>
+                <li><a href="tel:+10000000000">+1 000 000 0000</a></li>
+                <li><a href="{% url 'sections:subsection' 'contacts' 'offices' %}">Our offices</a></li>
+                <li><a href="{% url 'sections:subsection' 'contacts' 'support' %}">Support</a></li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

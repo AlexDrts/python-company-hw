@@ -1,0 +1,10 @@
+<h2 class="section-title">In this section</h2>
+<div class="grid">
+    {% for sub in subsections %}
+        <a class="card card-link" href="{{ sub.url }}">
+            <h3>{{ sub.title }}</h3>
+            <p>{{ sub.description }}</p>
+            <span class="more">Read more &rarr;</span>
+        </a>
+    {% endfor %}
+</div>

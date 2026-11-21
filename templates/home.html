@@ -2,22 +2,31 @@
 
 {% block title %}Home{% endblock %}
 {% block heading %}Welcome to Company{% endblock %}
-{% block subheading %}We build software solutions for business.{% endblock %}
+{% block subheading %}We build software solutions that help businesses grow: websites, mobile apps and process automation.{% endblock %}
 
 {% block content %}
     <h2 class="section-title">What we do</h2>
+    <p class="lead">Full development cycle — from the idea and design to launch and support.</p>
     <div class="grid">
         <div class="card">
+            <div class="icon">&#128187;</div>
             <h3>Web development</h3>
-            <p>Websites and web applications.</p>
+            <p>Corporate websites, online stores and web applications.</p>
         </div>
         <div class="card">
+            <div class="icon">&#128241;</div>
+            <h3>Mobile apps</h3>
+            <p>Native and cross-platform apps for iOS and Android.</p>
+        </div>
+        <div class="card">
+            <div class="icon">&#9881;</div>
             <h3>Automation</h3>
-            <p>Integrations and business process automation.</p>
+            <p>Integrations, reports and business process automation.</p>
         </div>
         <div class="card">
+            <div class="icon">&#128737;</div>
             <h3>Support</h3>
-            <p>Maintenance after launch.</p>
+            <p>Monitoring, updates and fixes after launch.</p>
         </div>
     </div>
 
@@ -26,7 +35,34 @@
         <div class="stat"><b>10</b>years on the market</div>
         <div class="stat"><b>100+</b>completed projects</div>
         <div class="stat"><b>50</b>team members</div>
+        <div class="stat"><b>12</b>countries of our clients</div>
     </div>
 
-    <a class="btn" href="/contacts/">Contact us</a>
+    <h2 class="section-title">How we work</h2>
+    <div class="grid">
+        <div class="card"><div class="meta">Step 1</div><h3>Discovery</h3><p>We learn your business and goals.</p></div>
+        <div class="card"><div class="meta">Step 2</div><h3>Design</h3><p>We prepare a prototype and the plan.</p></div>
+        <div class="card"><div class="meta">Step 3</div><h3>Development</h3><p>We build the product in short iterations.</p></div>
+        <div class="card"><div class="meta">Step 4</div><h3>Launch</h3><p>We release the product and support it.</p></div>
+    </div>
+
+    <h2 class="section-title">What clients say</h2>
+    <div class="grid grid-2">
+        <div class="card quote">
+            <p>"The team delivered our online store on time and helped us double our sales."</p>
+            <div class="author">— Anna Kovalenko, ShopLine</div>
+        </div>
+        <div class="card quote">
+            <p>"Great communication and high quality code. We continue working together."</p>
+            <div class="author">— Peter Smith, FastCargo</div>
+        </div>
+    </div>
+
+    <div class="cta">
+        <div>
+            <h2>Have a project in mind?</h2>
+            <p>Tell us about it and we will reply within one working day.</p>
+        </div>
+        <a class="btn" href="{% url 'feedback:form' %}">Write to us</a>
+    </div>
 {% endblock %}

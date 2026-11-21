@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Thank you{% endblock %}
+{% block heading %}Message sent{% endblock %}
+{% block subheading %}We have received your message.{% endblock %}
+
+{% block content %}
+    <div class="card">
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% empty %}
+            <p>Thank you for your message! We will reply soon.</p>
+        {% endfor %}
+        <div class="actions">
+            <a class="btn" href="{% url 'sections:home' %}">Go to home page</a>
+            <a class="btn btn-outline" href="{% url 'feedback:form' %}">Send another message</a>
+        </div>
+    </div>
+{% endblock %}

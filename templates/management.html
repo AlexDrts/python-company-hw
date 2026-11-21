@@ -2,27 +2,38 @@
 
 {% block title %}Management{% endblock %}
 {% block heading %}Company management{% endblock %}
-{% block subheading %}The people who lead the company.{% endblock %}
+{% block subheading %}The people who lead the company and make key decisions.{% endblock %}
 
 {% block content %}
+    <h2 class="section-title">Executive team</h2>
     <div class="grid">
         <div class="card">
             <div class="avatar">JD</div>
             <h3>John Doe</h3>
             <div class="meta">Chief Executive Officer</div>
-            <p>Leads company strategy.</p>
+            <p>Leads company strategy and works with key clients.</p>
+            <p><a href="mailto:ceo@example.com">ceo@example.com</a></p>
         </div>
         <div class="card">
             <div class="avatar">JS</div>
             <h3>Jane Smith</h3>
             <div class="meta">Chief Technology Officer</div>
-            <p>Leads development and architecture.</p>
+            <p>Leads development, architecture and technical hiring.</p>
+            <p><a href="mailto:cto@example.com">cto@example.com</a></p>
         </div>
         <div class="card">
             <div class="avatar">AB</div>
             <h3>Alex Brown</h3>
             <div class="meta">Chief Financial Officer</div>
-            <p>Manages company finances.</p>
+            <p>Manages company finances, budgets and reporting.</p>
+            <p><a href="mailto:cfo@example.com">cfo@example.com</a></p>
         </div>
+    </div>
+
+    <h2 class="section-title">Management principles</h2>
+    <div class="grid">
+        <div class="card"><div class="icon">&#129309;</div><h3>Open doors</h3><p>Any employee can talk to the management directly.</p></div>
+        <div class="card"><div class="icon">&#128202;</div><h3>Decisions based on data</h3><p>We measure results and plan using numbers.</p></div>
+        <div class="card"><div class="icon">&#127793;</div><h3>Team growth</h3><p>Every manager is responsible for the growth of the team.</p></div>
     </div>
 {% endblock %}

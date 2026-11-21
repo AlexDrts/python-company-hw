@@ -2,24 +2,38 @@
 
 {% block title %}News{% endblock %}
 {% block heading %}News{% endblock %}
-{% block subheading %}Latest company updates.{% endblock %}
+{% block subheading %}Latest company updates, project launches and events.{% endblock %}
 
 {% block content %}
+    <h2 class="section-title">Latest news</h2>
     <div class="grid">
         <div class="card">
             <div class="meta">November 2026</div>
             <h3>New office opened</h3>
-            <p>Our team keeps growing.</p>
+            <p>Our team keeps growing, so we moved into a bigger office in the city center.</p>
+            <span class="tag">Company</span>
         </div>
         <div class="card">
             <div class="meta">October 2026</div>
             <h3>New project launched</h3>
-            <p>We delivered a new product for our client.</p>
+            <p>We delivered a new learning platform for EduPlus.</p>
+            <span class="tag">Projects</span>
         </div>
         <div class="card">
             <div class="meta">September 2026</div>
             <h3>Internship program started</h3>
-            <p>New interns joined our team.</p>
+            <p>Ten interns joined our development and QA teams.</p>
+            <span class="tag">Events</span>
         </div>
+    </div>
+
+    <h2 class="section-title">Archive</h2>
+    <div class="card">
+        <ul class="timeline">
+            <li><b>August 2026</b>We celebrated 10 years on the market.</li>
+            <li><b>July 2026</b>The FastCargo mobile app was released.</li>
+            <li><b>May 2026</b>Our team spoke at a Python conference.</li>
+            <li><b>March 2026</b>We started a partnership with IT Academy.</li>
+        </ul>
     </div>
 {% endblock %}

@@ -5,24 +5,33 @@
 {% block subheading %}Who we are, how we work and what matters to us.{% endblock %}
 
 {% block content %}
-    <div class="card">
-        <h3>Our story</h3>
-        <p>Company was founded to help businesses grow with modern technology.</p>
+    <div class="grid grid-2">
+        <div class="card">
+            <h3>Our story</h3>
+            <p>Company was founded in 2016 by three developers who wanted to help businesses grow with modern technology. Today we are a team of 50 people working with clients from 12 countries.</p>
+            <div class="actions">
+                <a class="btn btn-outline" href="{% url 'sections:subsection' 'about' 'history' %}">Read our history</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Milestones</h3>
+            <ul class="timeline">
+                <li><b>2016</b>Company founded.</li>
+                <li><b>2020</b>First international client.</li>
+                <li><b>2026</b>100+ completed projects.</li>
+            </ul>
+        </div>
     </div>
 
     <h2 class="section-title">Our values</h2>
     <div class="grid">
-        <div class="card">
-            <h3>Quality</h3>
-            <p>We test every release.</p>
-        </div>
-        <div class="card">
-            <h3>Transparency</h3>
-            <p>We are honest about deadlines and costs.</p>
-        </div>
-        <div class="card">
-            <h3>Growth</h3>
-            <p>We help our team learn and grow.</p>
-        </div>
+        <div class="card"><div class="icon">&#11088;</div><h3>Quality</h3><p>We test every release before it reaches users.</p></div>
+        <div class="card"><div class="icon">&#128270;</div><h3>Transparency</h3><p>We are honest about deadlines and costs.</p></div>
+        <div class="card"><div class="icon">&#128640;</div><h3>Growth</h3><p>We help our team learn and grow.</p></div>
+    </div>
+
+    <h2 class="section-title">Technologies</h2>
+    <div class="card">
+        <p>Python, Django, PostgreSQL, JavaScript, React, Docker, AWS.</p>
     </div>
 {% endblock %}

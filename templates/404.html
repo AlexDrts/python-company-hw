@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Page not found{% endblock %}
+{% block heading %}Page not found{% endblock %}
+{% block subheading %}The page you are looking for does not exist or has been moved.{% endblock %}
+{% block hero_image %}{% endblock %}
+
+{% block content %}
+    <div class="error-page">
+        <img src="{% static 'img/hero-404.svg' %}" alt="404">
+        <h2>Oops! Nothing here</h2>
+        {% if path %}<p>There is no page at <b>{{ path }}</b>.</p>{% endif %}
+        <p>Check the address or choose one of the sections below.</p>
+        <div class="actions">
+            <a class="btn" href="{% url 'sections:home' %}">Go to home page</a>
+            <a class="btn btn-outline" href="{% url 'sections:contacts' %}">Contact us</a>
+        </div>
+    </div>
+
+    <h2 class="section-title">Sections</h2>
+    <div class="grid">
+        <a class="card card-link" href="{% url 'sections:news' %}"><h3>News</h3><p>Latest company updates.</p></a>
+        <a class="card card-link" href="{% url 'sections:management' %}"><h3>Management</h3><p>The people who lead the company.</p></a>
+        <a class="card card-link" href="{% url 'sections:about' %}"><h3>About</h3><p>Who we are and how we work.</p></a>
+        <a class="card card-link" href="{% url 'sections:contacts' %}"><h3>Contacts</h3><p>How to reach us.</p></a>
+    </div>
+{% endblock %}

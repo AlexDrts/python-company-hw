@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ subsection.title }} · {{ section.title }}{% endblock %}
+{% block heading %}{{ subsection.title }}{% endblock %}
+{% block subheading %}{{ subsection.description }}{% endblock %}
+
+{% block content %}
+    <div class="breadcrumbs">
+        <a href="{% url 'sections:home' %}">Home</a> /
+        {% if section_url != '/' %}<a href="{{ section_url }}">{{ section.title }}</a> /{% endif %}
+        {{ subsection.title }}
+    </div>
+
+    <div class="grid">
+        {% for card in subsection.cards %}
+            <div class="card">
+                {% if card.meta %}<div class="meta">{{ card.meta }}</div>{% endif %}
+                <h3>{{ card.title }}</h3>
+                <p>{{ card.text }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <h2 class="section-title">More in {{ section.title }}</h2>
+    <div class="grid">
+        {% for sub in subsections %}
+            {% if sub.slug != active_subsection %}
+                <a class="card card-link" href="{{ sub.url }}">
+                    <h3>{{ sub.title }}</h3>
+                    <p>{{ sub.description }}</p>
+                    <span class="more">Read more &rarr;</span>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="actions">
+        <a class="btn btn-outline" href="{{ section_url }}">&larr; Back to {{ section.title }}</a>
+    </div>
+{% endblock %}

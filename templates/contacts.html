@@ -5,23 +5,56 @@
 {% block subheading %}We will be happy to answer your questions.{% endblock %}
 
 {% block content %}
+    <div class="cta" style="margin-top: 0; margin-bottom: 20px;">
+        <div>
+            <h2>Have a question?</h2>
+            <p>Fill in the feedback form and we will reply within one working day.</p>
+        </div>
+        <a class="btn" href="{% url 'feedback:form' %}">Write to us</a>
+    </div>
+
     <div class="grid">
         <div class="card">
+            <div class="icon">&#127970;</div>
             <h3>Main office</h3>
-            <p>Address: 1 Example Street<br>Phone: +1 000 000 0000<br>Email: info@example.com</p>
+            <ul class="contact-list">
+                <li>1 Example Street</li>
+                <li><a href="tel:+10000000000">+1 000 000 0000</a></li>
+                <li><a href="mailto:info@example.com">info@example.com</a></li>
+            </ul>
         </div>
         <div class="card">
+            <div class="icon">&#127968;</div>
             <h3>Branch office</h3>
-            <p>Address: 1 Example Street<br>Phone: +1 000 000 0000<br>Email: info@example.com</p>
+            <ul class="contact-list">
+                <li>2 Example Street</li>
+                <li><a href="tel:+10000000001">+1 000 000 0001</a></li>
+                <li><a href="mailto:branch@example.com">branch@example.com</a></li>
+            </ul>
         </div>
         <div class="card">
+            <div class="icon">&#128172;</div>
             <h3>Support</h3>
-            <p>Address: 1 Example Street<br>Phone: +1 000 000 0000<br>Email: info@example.com</p>
+            <ul class="contact-list">
+                <li>Answer within 24 hours</li>
+                <li><a href="tel:+10000000002">+1 000 000 0002</a></li>
+                <li><a href="mailto:support@example.com">support@example.com</a></li>
+            </ul>
         </div>
     </div>
 
-    <div class="card" style="margin-top: 20px;">
-        <h3>Working hours</h3>
-        <p>Monday – Friday: 9:00 – 18:00<br>Saturday – Sunday: closed</p>
+    <div class="grid grid-2" style="margin-top: 20px;">
+        <div class="card">
+            <h3>Working hours</h3>
+            <p>Monday – Friday: 9:00 – 18:00<br>Saturday – Sunday: closed</p>
+        </div>
+        <div class="card">
+            <h3>Follow us</h3>
+            <ul class="contact-list">
+                <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+                <li><a href="https://t.me/" target="_blank" rel="noopener">Telegram</a></li>
+            </ul>
+        </div>
     </div>
 {% endblock %}
