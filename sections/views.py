@@ -2,6 +2,7 @@ from django.urls import reverse
 from django.views.generic import TemplateView
 
 from .data import SECTIONS
+from .entities import EXECUTIVES, PRINCIPLES
 
 
 class SectionMixin:
@@ -30,6 +31,20 @@ class SectionMixin:
 class SectionView(SectionMixin, TemplateView):
     def get_template_names(self):
         return [f'{self.section}.html']
+
+
+class ManagementView(SectionView):
+    section = 'management'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['company'] = {
+            'name': 'Company',
+            'executives': EXECUTIVES,
+            'principles': PRINCIPLES,
+            'contacts': {'email': 'info@example.com', 'phone': '10000000000'},
+        }
+        return context
 
 
 class SubsectionView(SectionMixin, TemplateView):

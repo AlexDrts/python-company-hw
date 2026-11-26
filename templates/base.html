@@ -61,6 +61,16 @@
         {% if subsections and not active_subsection %}
             {% include 'sections/_subsection_cards.html' %}
         {% endif %}
+
+        {% block cta %}
+            <div class="cta">
+                <div>
+                    <h2>Have a project in mind?</h2>
+                    <p>Tell us about it and we will reply within one working day.</p>
+                </div>
+                <a class="btn" href="{% url 'feedback:form' %}">Write to us</a>
+            </div>
+        {% endblock %}
     </div>
 </main>
 
